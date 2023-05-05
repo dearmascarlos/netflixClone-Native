@@ -16,7 +16,6 @@ import {HomeIcon as HomeIconSolid} from 'react-native-heroicons/solid';
 import {StarIcon as StarIconSolid} from 'react-native-heroicons/solid';
 import {RocketLaunchIcon} from 'react-native-heroicons/outline';
 import {RocketLaunchIcon as RocketLaunchIconSolid} from 'react-native-heroicons/outline';
-import {supabase} from './lib/supabase';
 
 import {Text} from 'react-native';
 

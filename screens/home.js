@@ -34,19 +34,28 @@ const Home = () => {
 
   useEffect(() => {
     fetch(`${baseUrl}${requests.fetchTopRated}`).then(res => res.json()).then((data) => {
-      setCardImage(data.results[2])
+      setCardImage(data.results[1])
+    }).catch(e => {
+      console.log(e)
+      return e
     })
   }, [])
 
   useEffect(() => {
     fetch(`${baseUrl}/movie/${cardImage?.id}?api_key=${apiKey}`).then(res => res.json()).then((data) => {
     setCardGenres(data.genres)
+    }).catch(e => {
+      console.log(e)
+      return e
     })
   }, [])
 
   useEffect(() => {
     fetch(`${baseUrl}${requests.fetchTrendingTv}`).then(res => res.json()).then((data) => {
       setTopTv(data.results)
+    }).catch(e => {
+      console.log(e)
+      return e
     })
   }, [])
 
